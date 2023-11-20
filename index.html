@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Combat au Tour par Tour</title>
+</head>
+<body>
+
+
+  <h1>Combat au Tour par Tour</h1>
+
+  <div id="battle-container">
+    <div id="player1" class="player">
+      <h2>Joueur 1</h2>
+      <p id="player1-info"></p>
+      <button onclick="playerAttack(player1, player2)">Attaquer</button>
+    </div>
+
+    <div id="player2" class="player">
+      <h2>Joueur 2</h2>
+      <p id="player2-info"></p>
+      <button onclick="playerAttack(player2, player1)" disabled>Attendre</button>
+    </div>
+  </div>
+
+  <div id="result"></div>
+
+    
+<script src="script.js"></script>
+</body>
+</html>

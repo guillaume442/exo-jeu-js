@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  #battle-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+  
+  .player {
+    border: 2px solid #333;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  #result {
+    margin-top: 20px;
+  }
+  
