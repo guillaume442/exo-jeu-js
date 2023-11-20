@@ -92,4 +92,3 @@ class Character {
     attacker.querySelector('button').disabled = true;
     defender.querySelector('button').disabled = false;
   }
-  
