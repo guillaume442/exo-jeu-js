@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-image: url(img/background.png);
   }
   
   #battle-container {
@@ -20,3 +21,11 @@ body {
     margin-top: 20px;
   }
   
+  #player1 img {
+    width: 100px;
+    height: 150px;
+  }
+  #player2 img {
+    width: 100px;
+    height: 150px;
+  }
