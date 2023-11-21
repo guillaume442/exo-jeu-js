@@ -5,46 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'>
-  <title>Combat au Tour par Tour</title>
+  <title>Combat des Champions</title>
 </head>
 <body>
 
-
   <h1>Combat des Champions</h1>
-
+  
   <div id="battle-container">
 
-    <div id="player1">
-      <h2>Guerrier</h2>
-      <img src="img/guerrier.png">
-      <p>Points de vie : <span id="player1Health">100</span></p>
-      <button onclick="attaquer(1)" id="player1Button">Attaque</button>
-      <button onclick="Special(1)" id="player11Button">Special</button>
-    </div>
+        <div id="player1" class="myDiv">
+          <h2>Guerrier</h2>
+          <p>Points de vie : <span id="player1Health">100</span></p>
+          <button onclick="attaquer(1)" id="player1Button">Attaque</button>
+          <button onclick="Special(1)" id="player11Button" >Special</button>
+          <button onclick="choosePlayer(1)" id="chooseButton1" class="allButton">Choisir ce Perso</button>
+        </div>
 
-    <div id="player2">
-      <h2>Mage</h2>
-      <img src="img/mage.png">
-      <p>Points de vie : <span id="player2Health">100</span></p>
-      <button onclick="attaquer(2)" id="player2Button">Attaque</button>
-      <button onclick="Special(2)" id="player22Button">Special</button>
-    </div>
+    
+      <div id="player2" class="myDiv">
+        <h2>Mage</h2>
+        <p>Points de vie : <span id="player2Health">100</span></p>
+        <button onclick="attaquer(2)" id="player2Button">Attaque</button>
+        <button onclick="Special(2)" id="player22Button">Special</button>
+        <button onclick="choosePlayer(2)" id="chooseButton2" class="allButton">Choisir ce Perso</button>
+      </div>
+    
 
-    <div id="player3">
-      <h2>Archer</h2>
-      <img src="img/guerrier.png">
-      <p>Points de vie : <span id="player1Health">100</span></p>
-      <button onclick="attaquer(1)" id="player1Button">Attaque</button>
-      <button onclick="Special(1)" id="player11Button">Special</button>
-    </div>
+    
+      <div id="player3" class="myDiv">
+        <h2>Archer</h2>
+        <p>Points de vie : <span id="player1Health">100</span></p>
+        <button onclick="attaquer(1)" id="player1Button">Attaque</button>
+        <button onclick="Special(1)" id="player11Button">Special</button>
+        <button onclick="choosePlayer(3)" id="chooseButton3" class="allButton">Choisir ce Perso</button>
+      </div>
+    
 
-    <div id="player4">
-      <h2>Pretre</h2>
-      <img src="img/mage.png">
-      <p>Points de vie : <span id="player2Health">100</span></p>
-      <button onclick="attaquer(2)" id="player2Button">Attaque</button>
-      <button onclick="Special(2)" id="player22Button">Special</button>
-    </div>
+    
+      <div id="player4" class="myDiv">
+        <h2>Pretre</h2>
+        <p>Points de vie : <span id="player2Health">100</span></p>
+        <button onclick="attaquer(2)" id="player2Button">Attaque</button>
+        <button onclick="Special(2)" id="player22Button">Special</button>
+        <button onclick="choosePlayer(4)" id="chooseButton4" class="allButton">Choisir ce Perso</button>
+      </div>
+    
 
   </div>
 

@@ -21,6 +21,15 @@ body {
     justify-content: space-evenly;
     margin-top: 150px;
   }
+  
+  Button {
+    /* width: 75px;
+    height: 30px; */
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'MedievalSharp';
+  }
 
   #player1 {
     background-image: url(img/Warrior.jpg);
@@ -58,55 +67,31 @@ body {
     border: 8px solid aliceblue;
   }
 
-  #player1 img {
-    width: 80px;
-    height: 160px;
-    visibility: hidden;
-  }
-
-  #player2 img {
-    width: 110px;
-    height: 160px;
-    visibility: hidden;
-  }
-
-  #player3 img {
-    width: 110px;
-    height: 160px;
-    visibility: hidden;
-  }
-  #player4 img {
-    width: 110px;
-    height: 160px;
-    visibility: hidden;
-  }
-
-  #player3 img {
-    width: 80px;
-    height: 160px;
-  }
-
-
-  #player4 img {
-    width: 110px;
-    height: 160px;
-  }
-
-  button {
-    width: 100px;
-    height: 50px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 17px;
-  }
 
   p {
     font-weight: bold;
     font-size: 20px;
     color: aliceblue;
+    margin-top: 240px;
+    display: none;
   }
 
   h2 {
     color: aliceblue;
     font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.463);
+    margin-top: 0px;
   }
+
+  .allButton {
+    margin-top: 125px;
+  }
+
+  #player1Button,
+#player11Button,
+#player2Button,
+#player22Button {
+  display: none;
+}
+

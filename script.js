@@ -212,3 +212,35 @@ function Special(joueur) {
   }
 
 }
+
+// -----------------------------------------------------------------------------------------------------
+
+let selectedPlayers = [];
+
+function choosePlayer(playerNumber) {
+  const player = document.getElementById(`player${playerNumber}`);
+  const chooseButton = document.getElementById(`chooseButton${playerNumber}`);
+
+  if (selectedPlayers.length < 2 && !selectedPlayers.includes(playerNumber)) {
+    selectedPlayers.push(playerNumber);
+    player.classList.add('selected');
+  } else {
+    alert("You can only choose 2 players!");
+  }
+
+  if (selectedPlayers.length === 2) {
+    // Masquer les joueurs non sélectionnés
+    for (let i = 1; i <= 4; i++) {
+      if (!selectedPlayers.includes(i)) {
+        document.getElementById(`player${i}`).style.display = 'none';
+        document.getElementById(`player${i}`).classList.remove('selected');
+      }
+    }
+
+    // Masquer les boutons "Choose"
+    for (let i = 1; i <= 4; i++) {
+      document.getElementById(`chooseButton${i}`).style.display = 'none';
+    }
+  }
+}
+
