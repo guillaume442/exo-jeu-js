@@ -4,30 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'>
   <title>Combat au Tour par Tour</title>
 </head>
 <body>
 
 
-  <h1>Combat au Tour par Tour</h1>
+  <h1>Combat des Champions</h1>
 
   <div id="battle-container">
-    <div id="player1" class="player">
+
+    <div id="player1">
       <h2>Joueur 1</h2>
       <img src="img/guerrier.png">
-      <p id="player1-info"></p>
-      <button onclick="playerAttack(player1, player2)">Attaquer</button>
+      <p>Points de vie : <span id="player1Health">100</span></p>
+      <button onclick="attaquer(1)" id="player1Button">Attaque</button>
+      <button onclick="Special(1)" id="player11Button">Special</button>
     </div>
 
-    <div id="player2" class="player">
+    <div id="player2">
       <h2>Joueur 2</h2>
       <img src="img/mage.png">
-      <p id="player2-info"></p>
-      <button onclick="playerAttack(player2, player1)" disabled>Attendre</button>
+      <p>Points de vie : <span id="player2Health">100</span></p>
+      <button onclick="attaquer(2)" id="player2Button">Attaque</button>
+      <button onclick="Special(2)" id="player22Button">Special</button>
     </div>
-  </div>
 
-  <div id="result"></div>
+  </div>
 
     
 <script src="script.js"></script>
