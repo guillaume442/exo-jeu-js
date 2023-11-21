@@ -1,14 +1,18 @@
 body {
     font-family: 'MedievalSharp';
     text-align: center;
-    background-image: url(img/background.png);
+    background-image: url(img/digital-art-landscape-fantasy-art-1480213-wallhere.com.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-position: center; */
+    height: 100vh;
     margin: 0%;
     overflow: hidden;
   }
 
   h1 {
-    font-size: 55px;
-    color: #000000;
+    font-size: 60px;
+    color: aliceblue;
   }
   
   #battle-container {
@@ -19,28 +23,71 @@ body {
   }
 
   #player1 {
-    background-image: url(img/background.guerrier.jpg);
-    background-size: 900px;
+    background-image: url(img/Warrior.jpg);
+    background-size: 270px;
     width: 250px;
     height: 375px;
     border-radius: 15px;
+    border: 8px solid aliceblue;
   }
   
   #player2 {
-    background-image: url(img/background.magic.png);
-    background-size: 550px;
+    background-image: url(img/Mage.jpg);
+    background-size: 285px;
     width: 250px;
     height: 375px;
     border-radius: 15px;
+    border: 8px solid aliceblue;
+  }
+  
+  #player3 {
+    background-image: url(img/archer.jpg);
+    background-size: 280px;
+    width: 250px;
+    height: 375px;
+    border-radius: 15px;
+    border: 8px solid aliceblue;
+  }
+
+  #player4 {
+    background-image: url(img/PRETRE.jpg);
+    background-size: 250px;
+    width: 250px;
+    height: 375px;
+    border-radius: 15px;
+    border: 8px solid aliceblue;
   }
 
   #player1 img {
     width: 80px;
     height: 160px;
+    visibility: hidden;
+  }
+
+  #player2 img {
+    width: 110px;
+    height: 160px;
+    visibility: hidden;
+  }
+
+  #player3 img {
+    width: 110px;
+    height: 160px;
+    visibility: hidden;
+  }
+  #player4 img {
+    width: 110px;
+    height: 160px;
+    visibility: hidden;
+  }
+
+  #player3 img {
+    width: 80px;
+    height: 160px;
   }
 
 
-  #player2 img {
+  #player4 img {
     width: 110px;
     height: 160px;
   }
@@ -48,7 +95,7 @@ body {
   button {
     width: 100px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
     font-size: 17px;
   }
@@ -61,4 +108,5 @@ body {
 
   h2 {
     color: aliceblue;
+    font-weight: bold;
   }

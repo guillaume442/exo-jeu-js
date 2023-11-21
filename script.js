@@ -125,6 +125,13 @@
 //   console.log(event.keyCode)  
 // })
 
+let data = {
+  "Guerrier" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
+  "Mage" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
+  "Pretre" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
+  "Archer" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
+}
+
 let player1Health = 100;
 let player2Health = 100;
 let currentPlayer = 1;
