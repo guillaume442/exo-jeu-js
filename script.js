@@ -125,36 +125,60 @@
 //   console.log(event.keyCode)  
 // })
 
-let data = {
-  "Guerrier" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
-  "Mage" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
-  "Pretre" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
-  "Archer" : { "point de vie" : 100, "Attaquer" : function(){ return "attaque"}},
-}
+
+
+
+
+
+
+
+
+// -------------------------------------------! tour par tour !--------------------------------------------------
+
+
+
+
+// let data = {
+//   "Guerrier" : { "point de vie" : 100, "special" : Charge, "Attaquer" : function(){ return "attaque"}},
+//   "Mage" : { "point de vie" : 100, "special" : Foudre, "Attaquer" : function(){ return "attaque"}},
+//   "Pretre" : { "point de vie" : 100, "Special" : saintEsprit, "Attaquer" : function(){ return "attaque"}},
+//   "Archer" : { "point de vie" : 100, "Special" : tripleFleche, "Attaquer" : function(){ return "attaque"}},
+// }
+
+
+
+// attaque
+
 
 let player1Health = 100;
 let player2Health = 100;
 let currentPlayer = 1;
 
+document.getElementById('player1Button').classList.add('hide-button');
+document.getElementById('player11Button').classList.add('hide-button');
+document.getElementById('player2Button').classList.add('hide-button');
+document.getElementById('player22Button').classList.add('hide-button');
+document.getElementById('player3Button').classList.add('hide-button');
+document.getElementById('player33Button').classList.add('hide-button');
+document.getElementById('player4Button').classList.add('hide-button');
+document.getElementById('player44Button').classList.add('hide-button');
+// document.getElementById('player1Health').classList.add('show-button');
+
+
 function attaquer(joueur) {
-  // Si ce n'est pas le tour du joueur, ne rien faire
   if (joueur !== currentPlayer) {
     return;
   }
 
-  // Générer un nombre aléatoire entre 1 et 10 pour les points de dégâts
   let degats = Math.floor(Math.random() * 20) + 1;
 
-  // Mettre à jour les points de vie du joueur cible
   if (joueur === 1) {
     player2Health -= degats;
     document.getElementById('player2Health').innerText = player2Health;
     currentPlayer = 2;
-    // Désactiver le bouton du joueur 1 et activer celui du joueur 2
     document.getElementById('player1Button').disabled = true;
     document.getElementById('player2Button').disabled = false;
 
-      // Masquer le bouton du joueur 1 et afficher celui du joueur 2
     document.getElementById('player1Button').classList.add('hide-button');
     document.getElementById('player2Button').classList.remove('hide-button');
 
@@ -162,19 +186,20 @@ function attaquer(joueur) {
     player1Health -= degats;
     document.getElementById('player1Health').innerText = player1Health;
     currentPlayer = 1;
-    // Désactiver le bouton du joueur 2 et activer celui du joueur 1
+
     document.getElementById('player1Button').disabled = false;
     document.getElementById('player2Button').disabled = true;
   }
 
-  // Vérifier si l'un des joueurs a atteint 0 points de vie
+
   if (player1Health <= 0 || player2Health <= 0) {
     alert('Fin du jeu! Le joueur ' + (player1Health <= 0 ? '2' : '1') + ' a gagné.');
-    // Tu peux ajouter du code ici pour réinitialiser le jeu si tu le souhaites
+
   }
 }
 
 
+//special
 
 
 function Special(joueur) {
@@ -213,7 +238,9 @@ function Special(joueur) {
 
 }
 
-// -----------------------------------------------------------------------------------------------------
+
+//selection
+
 
 let selectedPlayers = [];
 
@@ -229,7 +256,7 @@ function choosePlayer(playerNumber) {
   }
 
   if (selectedPlayers.length === 2) {
-    // Masquer les joueurs non sélectionnés
+
     for (let i = 1; i <= 4; i++) {
       if (!selectedPlayers.includes(i)) {
         document.getElementById(`player${i}`).style.display = 'none';
@@ -237,10 +264,21 @@ function choosePlayer(playerNumber) {
       }
     }
 
-    // Masquer les boutons "Choose"
+
     for (let i = 1; i <= 4; i++) {
       document.getElementById(`chooseButton${i}`).style.display = 'none';
     }
-  }
+
+    document.getElementById('player1Button').classList.remove('hide-button');
+    document.getElementById('player11Button').classList.remove('hide-button');
+    document.getElementById('player2Button').classList.remove('hide-button');
+    document.getElementById('player22Button').classList.remove('hide-button');
+    document.getElementById('player3Button').classList.add('hide-button');
+    document.getElementById('player33Button').classList.add('hide-button');
+    document.getElementById('player4Button').classList.add('hide-button');
+    document.getElementById('player44Button').classList.add('hide-button');
+    // document.getElementById('player1Health').classList.add('show-button');
+    }
 }
 
+// ---------------------------------------! fin tour par tour !-------------------------------------------------

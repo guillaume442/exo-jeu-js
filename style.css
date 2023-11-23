@@ -70,10 +70,9 @@ body {
 
   p {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     color: aliceblue;
     margin-top: 240px;
-    display: none;
   }
 
   h2 {
@@ -85,13 +84,32 @@ body {
   }
 
   .allButton {
-    margin-top: 125px;
+    margin-top: 150px;
+    width: 250px;
+    height: 50px;
+    background-color: rgba(54, 1, 1, 0.783);
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-image: url(img/background.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
   }
 
-  #player1Button,
+#player1Button,
 #player11Button,
 #player2Button,
 #player22Button {
+  /* display: none; */
+  margin-top: 0px;
+  width: 100px;
+  height: 30px;
+}
+
+.hide-button {
   display: none;
 }
 
+.show-button {
+  display : block
+}
