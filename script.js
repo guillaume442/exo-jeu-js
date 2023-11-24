@@ -146,30 +146,71 @@
 // }
 
 
+// var attackButtons = document.getElementsByClassName('attackButton');
+// var specialButtons = document.getElementsByClassName('specialButton');
+// var specialButtons = document.getElementsByTagName('p');
+
+// for (var i = 0; i < attackButtons.length; i++) {
+//     attackButtons[i].style.display = 'none';
+// }
+
+// for (var i = 0; i < specialButtons.length; i++) {
+//     specialButtons[i].style.display = 'none';
+// }
+
+
+let selectedPlayers = [];
+
+function choosePlayer(playerNumber) {
+  const player = document.getElementById(`player${playerNumber}`);
+  const chooseButton = document.getElementById(`chooseButton${playerNumber}`);
+
+  if (selectedPlayers.length < 2 && !selectedPlayers.includes(playerNumber)) {
+    selectedPlayers.push(playerNumber);
+    player.classList.add('selected');
+  } else {
+    alert("Pas le droit de s'affronter soi-même !");
+  }
+
+  if (selectedPlayers.length === 2) {
+
+    for (let i = 1; i <= 4; i++) {
+      if (!selectedPlayers.includes(i)) {
+        document.getElementById(`player${i}`).style.display = 'none';
+        document.getElementById(`player${i}`).classList.remove('selected');
+      }
+    }
+
+
+    for (let i = 1; i <= 4; i++) {
+      document.getElementById(`chooseButton${i}`).style.display = 'none';
+    }
+
+    document.querySelectorAll('.attackButton, .specialButton, p').forEach(element => {
+      element.style.display = 'block';
+    });
+    
+  }
+}
+
+
+
 
 // attaque
 
 
 let player1Health = 100;
 let player2Health = 100;
+// let player3Health = 100;
+// let player4Health = 100;
 let currentPlayer = 1;
-
-document.getElementById('player1Button').classList.add('hide-button');
-document.getElementById('player11Button').classList.add('hide-button');
-document.getElementById('player2Button').classList.add('hide-button');
-document.getElementById('player22Button').classList.add('hide-button');
-document.getElementById('player3Button').classList.add('hide-button');
-document.getElementById('player33Button').classList.add('hide-button');
-document.getElementById('player4Button').classList.add('hide-button');
-document.getElementById('player44Button').classList.add('hide-button');
-// document.getElementById('player1Health').classList.add('show-button');
 
 
 function attaquer(joueur) {
   if (joueur !== currentPlayer) {
     return;
   }
-
+  
   let degats = Math.floor(Math.random() * 20) + 1;
 
   if (joueur === 1) {
@@ -177,26 +218,28 @@ function attaquer(joueur) {
     document.getElementById('player2Health').innerText = player2Health;
     currentPlayer = 2;
     document.getElementById('player1Button').disabled = true;
+    document.getElementById('player11Button').disabled = true;
     document.getElementById('player2Button').disabled = false;
+    document.getElementById('player22Button').disabled = false;
+    
+  } 
 
-    document.getElementById('player1Button').classList.add('hide-button');
-    document.getElementById('player2Button').classList.remove('hide-button');
-
-  } else {
+  else {
     player1Health -= degats;
     document.getElementById('player1Health').innerText = player1Health;
     currentPlayer = 1;
 
     document.getElementById('player1Button').disabled = false;
+    document.getElementById('player11Button').disabled = false;
     document.getElementById('player2Button').disabled = true;
+    document.getElementById('player22Button').disabled = true;
   }
+  } 
 
-
-  if (player1Health <= 0 || player2Health <= 0) {
+  if (player1Health <= 0 || player2Health <= 0 || player3Health <= 0 || player4Health <= 0) {
     alert('Fin du jeu! Le joueur ' + (player1Health <= 0 ? '2' : '1') + ' a gagné.');
-
   }
-}
+  
 
 
 //special
@@ -216,11 +259,10 @@ function Special(joueur) {
     currentPlayer = 2;
 
     document.getElementById('player11Button').disabled = true;
+    document.getElementById('player1Button').disabled = true;
     document.getElementById('player22Button').disabled = false;
+    document.getElementById('player2Button').disabled = false;
 
-
-    document.getElementById('player11Button').classList.add('hide-button');
-    document.getElementById('player22Button').classList.remove('hide-button');
 
   } else {
     player1Health -= degats;
@@ -228,7 +270,9 @@ function Special(joueur) {
     currentPlayer = 1;
 
     document.getElementById('player11Button').disabled = false;
+    document.getElementById('player1Button').disabled = false;
     document.getElementById('player22Button').disabled = true;
+    document.getElementById('player2Button').disabled = true;
   }
 
 
@@ -242,43 +286,6 @@ function Special(joueur) {
 //selection
 
 
-let selectedPlayers = [];
 
-function choosePlayer(playerNumber) {
-  const player = document.getElementById(`player${playerNumber}`);
-  const chooseButton = document.getElementById(`chooseButton${playerNumber}`);
-
-  if (selectedPlayers.length < 2 && !selectedPlayers.includes(playerNumber)) {
-    selectedPlayers.push(playerNumber);
-    player.classList.add('selected');
-  } else {
-    alert("You can only choose 2 players!");
-  }
-
-  if (selectedPlayers.length === 2) {
-
-    for (let i = 1; i <= 4; i++) {
-      if (!selectedPlayers.includes(i)) {
-        document.getElementById(`player${i}`).style.display = 'none';
-        document.getElementById(`player${i}`).classList.remove('selected');
-      }
-    }
-
-
-    for (let i = 1; i <= 4; i++) {
-      document.getElementById(`chooseButton${i}`).style.display = 'none';
-    }
-
-    document.getElementById('player1Button').classList.remove('hide-button');
-    document.getElementById('player11Button').classList.remove('hide-button');
-    document.getElementById('player2Button').classList.remove('hide-button');
-    document.getElementById('player22Button').classList.remove('hide-button');
-    document.getElementById('player3Button').classList.add('hide-button');
-    document.getElementById('player33Button').classList.add('hide-button');
-    document.getElementById('player4Button').classList.add('hide-button');
-    document.getElementById('player44Button').classList.add('hide-button');
-    // document.getElementById('player1Health').classList.add('show-button');
-    }
-}
 
 // ---------------------------------------! fin tour par tour !-------------------------------------------------

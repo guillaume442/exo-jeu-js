@@ -84,7 +84,7 @@ body {
   }
 
   .allButton {
-    margin-top: 150px;
+    margin-top: 250px;
     width: 250px;
     height: 50px;
     background-color: rgba(54, 1, 1, 0.783);
@@ -101,15 +101,45 @@ body {
 #player2Button,
 #player22Button {
   /* display: none; */
-  margin-top: 0px;
+  /* margin-top: 0px;
   width: 100px;
-  height: 30px;
+  height: 30px; */
 }
 
-.hide-button {
+/* .hide-button {
   display: none;
 }
 
 .show-button {
   display : block
+} */
+
+.attackButton, .specialButton, p {
+  display: none;
+}
+
+.attackButton {
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 25px;
+  color: darkblue;
+}
+
+.specialButton {
+  width: 120px;
+  height: 40px;
+  /* background-image: url(img/special.background.button.jpg);
+  background-size: cover; */
+  color: crimson;
+  font-weight: bold;
+  font-size: 25px;
+  /* background-color: crimson; */
+}
+
+.caca {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-left: 5px;
 }
