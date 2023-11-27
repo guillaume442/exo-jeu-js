@@ -96,24 +96,6 @@ body {
     background-repeat: no-repeat;
   }
 
-#player1Button,
-#player11Button,
-#player2Button,
-#player22Button {
-  /* display: none; */
-  /* margin-top: 0px;
-  width: 100px;
-  height: 30px; */
-}
-
-/* .hide-button {
-  display: none;
-}
-
-.show-button {
-  display : block
-} */
-
 .attackButton, .specialButton, p {
   display: none;
 }

@@ -201,8 +201,6 @@ function choosePlayer(playerNumber) {
 
 let player1Health = 100;
 let player2Health = 100;
-// let player3Health = 100;
-// let player4Health = 100;
 let currentPlayer = 1;
 
 
@@ -234,12 +232,13 @@ function attaquer(joueur) {
     document.getElementById('player2Button').disabled = true;
     document.getElementById('player22Button').disabled = true;
   }
-  } 
+  
 
-  if (player1Health <= 0 || player2Health <= 0 || player3Health <= 0 || player4Health <= 0) {
+  if (player1Health <= 0 || player2Health <= 0) {
     alert('Fin du jeu! Le joueur ' + (player1Health <= 0 ? '2' : '1') + ' a gagné.');
   }
   
+  }
 
 
 //special
