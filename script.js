@@ -139,10 +139,10 @@
 
 
 // let data = {
-//   "Guerrier" : { "point de vie" : 100, "special" : Charge, "Attaquer" : function(){ return "attaque"}},
-//   "Mage" : { "point de vie" : 100, "special" : Foudre, "Attaquer" : function(){ return "attaque"}},
-//   "Pretre" : { "point de vie" : 100, "Special" : saintEsprit, "Attaquer" : function(){ return "attaque"}},
-//   "Archer" : { "point de vie" : 100, "Special" : tripleFleche, "Attaquer" : function(){ return "attaque"}},
+//   "Guerrier" : { "point de vie" : 100, "point de defense" : 50, "special" : Charge, "Attaquer" : function(){ return "attaque"}},
+//   "Mage" : { "point de vie" : 100, "point de defense" : 50, "special" : Foudre, "Attaquer" : function(){ return "attaque"}},
+//   "Pretre" : { "point de vie" : 100, "point de defense" : 50, "Special" : saintEsprit, "Attaquer" : function(){ return "attaque"}},
+//   "Archer" : { "point de vie" : 100, "point de defense" : 50, "Special" : tripleFleche, "Attaquer" : function(){ return "attaque"}},
 // }
 
 
